@@ -4,6 +4,7 @@ import './App.css';
 import Info from './components/info'
 import Home from './components/home'
 import Products from './components/products'
+import Contact from './components/Contact'
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
       <Home />
       <Info />
       <Products />
+      <Contact />
 
       </div>
     );
