@@ -1,26 +1,34 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Info from './components/info'
-import Home from './components/home'
-import Products from './components/products'
+import Info from './components/Info'
+import Home from './components/Home'
+import Products from './components/Products'
 import Contact from './components/Contact'
+import Patient from './components/Patient'
+import {Route, Switch, NavLink} from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
       <div>
-        <nav className='barra'>
+        
       <ul className='lista'>
-        <li>Home</li>
-        <li>Products</li>
-        <li>info</li>
+      <NavLink to='/' className='linksito'><li>Home</li></NavLink>
+      <NavLink to='/info' className='linksito'><li>Info</li></NavLink> 
+      <NavLink to='/products' className='linksito'><li>Products</li></NavLink>  
+      <NavLink to='/contact' className='linksito'><li>Contact</li></NavLink> 
+      <NavLink to='/patient' className='linksito'><li>Patient</li></NavLink>
       </ul>
-      </nav>
-      <Home />
-      <Info />
-      <Products />
-      <Contact />
+      
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/info' component={Info} />
+        <Route exact path='/products' component={Products} />
+        <Route exact path='/contact' component={Contact} />
+        <Route exact path='/patient' component={Patient} />
+      </Switch>
+     
 
       </div>
     );
