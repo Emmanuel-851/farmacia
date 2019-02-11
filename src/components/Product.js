@@ -9,7 +9,7 @@ const Product = (props) =>(
                 <p>Caduca en : {props.p.caducidad}</p>
                 <p>contien : {props.p.sustancia}</p>
                 <p>contenido : {props.p.contenido}</p>
-                <h3>{props.p.precio}</h3>
+                <h3>${props.p.precio}</h3>
                 
                 </div>
                 
